@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI dan Masa Depan Pekerjaan</title>
+    <link rel="stylesheet" href="articlestyle.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">Logo</a>
+                </div>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About Me</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="article-page">
+            <div class="container">
+                <h1 class="article-title">AI dan Masa Depan Pekerjaan</h1>
+                <div class="article-meta">
+                    <span class="date" id="tanggal-dinamis"></span>
+                    <span class="category">Artificial Intelligence</span>
+                </div>
+                <div class="article-content">
+                    <p>Artificial Intelligence (AI) semakin mengubah cara kita bekerja. Dengan kemampuan untuk mengotomatisasi tugas-tugas rutin, AI memungkinkan manusia untuk fokus pada pekerjaan yang membutuhkan kreativitas dan empati. Namun, tantangannya adalah bagaimana kita menyesuaikan tenaga kerja dengan perubahan ini.</p>
+                    
+                    <h2>Transformasi Dunia Kerja</h2>
+                    <p>Seiring berkembangnya teknologi AI, banyak pekerjaan yang sebelumnya membutuhkan campur tangan manusia kini dapat diotomatisasi. Misalnya, pekerjaan administratif, entri data, dan beberapa aspek layanan pelanggan. Namun, ini tidak berarti AI akan sepenuhnya menggantikan manusia.</p>
+                    
+                    <p>Justru, AI menciptakan kategori pekerjaan baru yang belum pernah ada sebelumnya. Ahli data, pengembang AI, dan spesialis etika AI adalah beberapa contoh pekerjaan yang muncul sebagai respons terhadap kemajuan ini.</p>
+                    
+                    <h2>Keterampilan Masa Depan</h2>
+                    <p>Untuk tetap relevan di era AI, pekerja perlu mengembangkan keterampilan yang sulit direplikasi oleh mesin. Ini termasuk:</p>
+                    <ul>
+                        <li>Kreativitas dan inovasi</li>
+                        <li>Kecerdasan emosional</li>
+                        <li>Pemikiran kritis</li>
+                        <li>Adaptabilitas</li>
+                        <li>Komunikasi interpersonal</li>
+                    </ul>
+                    
+                    <h2>Tantangan Transisi</h2>
+                    <p>Transisi menuju ekonomi yang diperkuat AI tidak tanpa tantangan. Beberapa pekerja mungkin kehilangan pekerjaan mereka dan memerlukan pelatihan ulang. Lembaga pendidikan perlu merevisi kurikulum mereka untuk mempersiapkan generasi mendatang dengan keterampilan yang relevan.</p>
+                    
+                    <p>Pemerintah dan industri juga perlu bekerja sama untuk menciptakan program pelatihan dan jaring pengaman sosial untuk mereka yang terkena dampak negatif dari otomatisasi.</p>
+                    
+                    <h2>Kesimpulan</h2>
+                    <p>AI tidak diragukan lagi mengubah lanskap pekerjaan, tetapi ini tidak harus dilihat sebagai ancaman. Dengan persiapan dan adaptasi yang tepat, masyarakat dapat memanfaatkan kekuatan AI sambil menciptakan peluang kerja baru dan bermakna.</p>
+                    
+                    <p>Yang penting adalah kita mengambil pendekatan proaktif terhadap perubahan ini, memastikan bahwa kemajuan teknologi menguntungkan semua lapisan masyarakat.</p>
+                </div>
+                
+                <div class="article-footer">
+                    <a href="index.html#blog" class="back-button">Kembali ke Blog</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        const today = new Date();
+        const options = { month: 'long', day: 'numeric', year: 'numeric' };
+        const formattedDate = today.toLocaleDateString('en-US', options);
+        document.getElementById('tanggal-dinamis').textContent = formattedDate;
+    </script>
+      
+</body>
+</html>

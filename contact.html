@@ -1,26 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css"> <!-- CSS utama website -->
+    <link rel="stylesheet" href="contact-styles.css"> <!-- CSS khusus halaman kontak -->
 </head>
 <body>
-    <p align="center">
-        <a href="index.html">Home</a> |
-        <a href="about.html">About Me</a> |
-        <a href="gallery.html">Gallery</a> |
-        <a href="blog.html">Blog</a> |
-        <a href="contact.html">Contact</a>
-    </p>
+    <header>
+        <div class="container">
+            <nav>
+                
+                <ul class="menu">
+                    <li><a href="index.html"><strong>Home</strong></a></li>
+                    <!-- Tambahkan menu navigasi lainnya sesuai kebutuhan -->
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div align="center" class="container">
-        <h1 align="center">Contact Me!</h1>
-        <p>Email: <a href="mailto:jonathankaligis026@student.unsrat.ac.id">jonathankaligis026@student.unsrat.ac.id</a></p>
-        <p>Phone: <a href="https://wa.me/6281243661213" target="_blank">+62 812 4366 1213</a></p>
-        <p>Instagram: <a href="https://www.instagram.com/jokaligis" target="_blank">@jokaligis</a></p>
-        <big><b>JoKa tte yonde kudasai, Call Me JoKa, Panggil Saya JoKa</b></big>
-    </div>
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <h1 class="section-title">Kontak Saya</h1>
+                
+                <div class="contact-container">
+                    <div class="contact-info"><br>
+                        <h3>Informasi Kontak</h3>
+                        <div class="info-item">
+                            <span class="icon">📍</span>
+                            <p>Winangun 2, Wisma Pelni</p>
+                        </div><br>
+                        <div class="info-item">
+                            <span class="icon">📞</span>
+                            <p>+62 812 4366 1211</p>
+                        </div>
+                        <div class="info-item"><br>
+                            <span class="icon">✉️</span> 
+                            <p>jonathankaligis026@student.unsrat.ac.id</p>
+                        </div>
+                       
+                        
+                        
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <h3>Kirim Pesan</h3>
+                        <p>Hubungi saya jika ingin berdiskusi sesuatu!</p>
+                        
+                        <!-- Form yang langsung mengirim ke email menggunakan mailto -->
+                        <form id="contactForm" class="contact-form" action="mailto:info@namadomain.com" method="post" enctype="text/plain">
+                            <div class="form-group">
+                                <label for="name">Nama Lengkap</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subjek</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Pesan</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Kirim Pesan</button>
+                        </form>
+                        
+                        <div id="formStatus" class="form-status"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            // Validasi form sebelum submit
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            const formStatus = document.getElementById('formStatus');
+            
+            if (!name || !email || !subject || !message) {
+                e.preventDefault(); // Mencegah submit jika ada field yang kosong
+                formStatus.innerHTML = '<p class="error">Mohon lengkapi semua field!</p>';
+                return false;
+            }
+            
+            // Validasi format email
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                e.preventDefault();
+                formStatus.innerHTML = '<p class="error">Format email tidak valid!</p>';
+                return false;
+            }
+            
+            // Jika validasi berhasil, form akan submit dan browser akan membuka aplikasi email
+            formStatus.innerHTML = '<p class="success">Form valid! Membuka aplikasi email...</p>';
+    
+        });
+    </script>
+
 </body>
-</html> 
+</html>

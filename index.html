@@ -3,24 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - My Portfolio</title>
+    <title>Jonathan Kaligis - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <p align="center">
-        <a href="index.html">Home</a> |
-        <a href="about.html">About Me</a> |
-        <a href="gallery.html">Gallery</a> |
-        <a href="blog.html">Blog</a> |
-        <a href="contact.html">Contact</a>
-    </p>
+    <header>
+        <nav class="navs">
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <video autoplay muted loop class="bg-video">
+        <source src="videos/samurai.mp4" type="video/mp4">
+    </video>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                
+                <p class="welcome-text">Watashi no u~ebusaito e yōkoso</p>
+                <h1>I AM JONATHAN KALIGIS</h1>
+                <h2>INFORMATICS STUDENT</h2>
+                <a href="awal.html">
+                <div class="profile-img">
+                    <img src="./images/almets-bebas-crop.jpg" alt="Jonathan Kaligis" width="150">
+                </div>
+                </a>
+                <div class="date-time">
+                    <p id="date"></p>
+                    <p id="time"></p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/jokalzz" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com/@zydesx4199" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/jokaligis/?__pwa=1#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>    
+                </div>
+            </div>
+        </section>
 
-    <div class="container">
-        <h1 align="center">Watashi no u~ebusaito e yōkoso</h1>
-        <br>
-        <h1 align="center">I AM JONATHAN KALIGIS</h1>
-        <h2 align="center">I'M AN INFORMATICS STUDENT</h2>
-        <center><img  src="./images/almets-bebas-crop.jpg" alt="foto saya" width="15%" ></center>        
-    </div>
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>HELLO WORLD!</h3>
+                        <p>Call Me JoKa</p>
+                        <p>I am currently in my fourth semester studying informatics engineering at Sam Ratulangi University, and I am just beginning to explore the world of coding. I have a strong passion for technology, particularly in programming. 
+                        Additionally, I am enthusiastic about E-sports like Valorant and Zenless Zone Zero, and I do sports too particularly Basketball and GYM.</p>
+                        
+                        <div class="personal-info">
+                            <div class="info-item">
+                                <span class="info-label">Name:</span>
+                                <span class="info-value">Jonathan Gabrilio Kaligis</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Hobby:</span>
+                                <span class="info-value">Coding, Playing Valorant & Zenless Zone Zero, and Playing Guitar</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Address:</span>
+                                <span class="info-value">Manado, Sulawesi Utara, Indonesia</span>
+                            </div>
+                        </div>
+                        
+                        <p>Thank you for visiting this page! If you want to know more, please visit the <a href="contact.html">Contact</a> page to connect with me.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2 class="section-title">My Gallery</h2>
+                
+                <div class="gallery-section">
+                    <h3>Lifestyle Photos</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="./images/santai-1.jpg" alt="Me At Beach">
+                            <div class="gallery-caption">Me At Beach</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/santai-3.jpg" alt="Me As A Nerd">
+                            <div class="gallery-caption">Me As A Nerd</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/santai-2.jpg" alt="Me Think Me Cute">
+                            <div class="gallery-caption">Me Think Me Cute</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-section">
+                    <h3>GYM Progress</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="./images/berotot-1.jpg" alt="1 MONTH">
+                            <div class="gallery-caption">1 MONTH</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/berotot-2.jpg" alt="2 MONTHS">
+                            <div class="gallery-caption">2 MONTHS</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/berotot-4.jpg" alt="3 MONTHS">
+                            <div class="gallery-caption">3 MONTHS</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-section">
+                    <h3>My Best Build</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="./images/miyabi.png" alt="Hoshimi Miyabi">
+                            <div class="gallery-caption">Hoshimi Miyabi</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/astra.png" alt="Astra Yao">
+                            <div class="gallery-caption">Astra Yao</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/rina.png" alt="Alexandrina Sebastine">
+                            <div class="gallery-caption">Alexandrina Sebastine</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="section">
+            <div class="container">
+                <h2 class="section-title">Blog & Articles</h2>
+                
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-content">
+                            <h3>AI dan Masa Depan Pekerjaan</h3>
+                            <p>Artificial Intelligence (AI) semakin mengubah cara kita bekerja. Dengan kemampuan untuk mengotomatisasi tugas-tugas rutin, AI memungkinkan manusia untuk fokus pada pekerjaan yang membutuhkan kreativitas dan empati...</p>
+                            <a href="artikel-ai-masa-depan-pekerjaan.html" class="read-more">Read More</a>
+                        </div>
+                    </article>
+        
+                    <article class="blog-card">
+                        <div class="blog-content">
+                            <h3>Etika dalam Pengembangan AI</h3>
+                            <p>Pengembangan AI tidak hanya tentang teknologi, tetapi juga etika. Bagaimana kita memastikan AI tidak digunakan untuk merugikan manusia? Isu seperti bias dalam algoritma dan privasi data...</p>
+                            <a href="artikel-etika-pengembangan-ai.html" class="read-more">Read More</a>
+                        </div>
+                    </article>
+        
+                    <article class="blog-card">
+                        <div class="blog-content">
+                            <h3>AI Generatif: Inovasi atau Ancaman?</h3>
+                            <p>AI generatif seperti model bahasa besar dan pembuat gambar telah menciptakan gelombang inovasi. Dari seni hingga penulisan, teknologi ini menawarkan kemungkinan tak terbatas...</p>
+                            <a href="artikel-ai-generatif.html" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jonathan Kaligis</h3>
+                    <p>Informatics Student at Sam Ratulangi University</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Go To</h3>
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/jokalzz" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.youtube.com/@zydesx4199" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/jokaligis/?__pwa=1#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Jonathan Kaligis. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
