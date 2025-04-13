@@ -762,33 +762,60 @@ html {
 }
 
 .inksplash {
-    margin: 0;
     background-color: #000;
     color: #fff;
-}
-
-.banner {
+  }
+  
+  .banner {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     position: relative;
-}
-.banner .content .title {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .banner .content {
+    z-index: 1;
+    max-width: 90%;
+  }
+  
+  .banner .content .title {
     font-family: 'Hallowed Grounds';
-    font-size: 9em;
-}
-.banner::before {
+    font-size: 8vw;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  
+  .banner .content .title:hover {
+    color: rgb(78, 60, 177);
+  }
+  
+  .welcome {
+    font-family: 'Hallowed Grounds';
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .welcome:hover {
+    color: red;
+  }
+  
+  .banner::before {
     content: '';
     position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: -2;
     mask-image: url(images/ink_lv2.gif);
     mask-size: cover;
     mask-position: center;
-}
-
-.bg-video {
+    background-color: black;
+  }
+  
+  .bg-video {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -797,23 +824,23 @@ html {
     z-index: -1;
   }
   
-  .title{
-    text-align: center;
-    color: #ffffff;
-    font-size: large;
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .banner .content .title {
+      font-size: 12vw;
+    }
+  
+    .welcome {
+      font-size: 1rem;
+    }
   }
-
-  .title:hover{
-    color: rgb(78, 60, 177);
+  
+  @media (max-width: 480px) {
+    .banner .content .title {
+      font-size: 14vw;
+    }
+  
+    .welcome {
+      font-size: 1rem;
+    }
   }
-
-  .welcome{
-    text-align: center;
-    color: #ffffff;
-    font-size: large;
-  }
-
- .welcome:hover{
-  color: red;
-
-}
