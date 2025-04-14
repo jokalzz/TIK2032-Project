@@ -905,7 +905,7 @@ html {
   }
 
   .main-video {
-    margin-top: 50px;
+    margin-top: 1rem;
     width: 50%;
     height: auto;
 }
@@ -915,3 +915,29 @@ html {
     align-items: center;
     text-align: center;
   }
+
+  .navs-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 12px;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.navs-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prevs-button {
+    left: 10px;
+}
+
+.nexts-button {
+    right: 10px;
+}
