@@ -121,3 +121,7 @@ function updateDateTime() {
 // Perbarui setiap detik
 setInterval(updateDateTime, 1000);
 updateDateTime();
+
+function redirectToPage() {
+        window.location.href = "https://www.instagram.com/jokaligis"; 
+}

@@ -941,3 +941,36 @@ html {
 .nexts-button {
     right: 10px;
 }
+
+button {
+    background-color: #4ca3af; /* Warna latar belakang hijau */
+    color: white; /* Teks berwarna putih */
+    font-size: 16px; /* Ukuran font */
+    padding: 10px 20px; /* Jarak dalam tombol */
+    border: none; /* Menghapus border default */
+    border-radius: 5px; /* Membulatkan sudut tombol */
+    cursor: pointer; /* Menambahkan kursor pointer saat hover */
+    transition: background-color 0.3s ease; /* Transisi halus untuk perubahan warna */
+    width: 100%; /* Membuat tombol lebar 100% dari kontainer */
+    max-width: 200px; /* Membatasi lebar maksimal tombol */
+    margin: 10px auto; /* Menambahkan margin dan meratakan tombol ke tengah */
+    display: block; /* Menjadikan tombol block-level element */
+}
+
+/* Efek hover untuk tombol */
+button:hover {
+    background-color: #4556a0; /* Mengubah warna latar belakang saat hover */
+}
+
+/* Efek klik pada tombol */
+button:active {
+    transform: scale(0.98); /* Sedikit memperkecil tombol saat diklik */
+}
+
+/* Media query untuk layar kecil */
+@media (max-width: 600px) {
+    button {
+        font-size: 14px; /* Mengurangi ukuran font pada layar kecil */
+        padding: 8px 16px; /* Mengurangi padding pada layar kecil */
+    }
+}
