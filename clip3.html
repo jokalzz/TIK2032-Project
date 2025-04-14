@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI dan Masa Depan Pekerjaan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navs">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Me</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <video autoplay muted loop class="bg-video">
+        <source src="videos/samurai.mp4" type="video/mp4">
+    </video>
+    <main>
+        
+            <div class="clips">
+                <div class="clip">
+                    <video controls class="main-video">
+                      <source src="videos/clip3.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+            </div>
+
+    </main>
+
+    <footer>
+        <div class="bawah">
+            <p>&copy; 2025. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        const today = new Date();
+        const options = { month: 'long', day: 'numeric', year: 'numeric' };
+        const formattedDate = today.toLocaleDateString('en-US', options);
+        document.getElementById('tanggal-dinamis').textContent = formattedDate;
+    </script>
+      
+</body>
+</html>

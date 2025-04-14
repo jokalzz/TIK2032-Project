@@ -117,22 +117,49 @@ nav {
 }
 
 .welcome-text {
-    font-size: 18px;
+    font-size: clamp(1rem, 2.5vw, 1.5rem); 
     color: #efff92;
     margin-bottom: 10px;
+
+  text-shadow:
+    2px 2px 4px rgba(0, 0, 0, 0.7),
+    0 0 5px #efff92,
+    0 0 10px #efff92,
+    0 0 20px #aaff00;
+
+  animation: glowPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow:
+      2px 2px 4px rgba(0, 0, 0, 0.7),
+      0 0 5px #efff92,
+      0 0 10px #efff92,
+      0 0 20px #aaff00;
+  }
+  50% {
+    text-shadow:
+      2px 2px 4px rgba(0, 0, 0, 0.7),
+      0 0 2px #efff92,
+      0 0 5px #efff92,
+      0 0 10px #aaff00;
+  }
 }
 
 .hero h1 {
     font-size: 48px;
     font-weight: 700;
-    color: #b69d59;
+    color: #ffe089;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .hero h2 {
     font-size: 24px;
-    color: #bdb877;
+    color: #fff896;
     margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .profile-img {
@@ -169,13 +196,13 @@ nav {
 .date-time #date {
     font-size: 20px;
     font-weight: 700;
-    color: #bdb877;
+    color: #fff896;
     margin-bottom: 10px;
 }
 .date-time #time {
     font-size: 15px;
     font-weight: 700;
-    color: #bdb877;
+    color: #fff896;
     margin-bottom: 10px;
 }
 
@@ -843,4 +870,29 @@ html {
     .welcome {
       font-size: 1rem;
     }
+  }
+
+ .clip {
+    height: 100vh;
+    display: flex;
+    justify-content: center;  /* horizontal center */
+    align-items: center;      /* vertical center */
+    font-family: Arial, sans-serif;
+    padding: 1rem;
+  }
+
+  .main-video {
+    width: 50%;             /* video akan mengikuti lebar container */
+    max-width: 1200px;       /* maksimal lebar video */
+    height: auto;            /* tinggi otomatis agar proporsional */
+    display: block;
+    margin: 0 auto;          /* biar tetap di tengah */
+    border-radius: 10px;     /* opsional: biar sudutnya membulat */
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.4); /* opsional: efek bayangan */
+  }
+  
+  .bawah {
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
   }
