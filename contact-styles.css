@@ -25,6 +25,7 @@
 .menu {
     display: flex;
     list-style: none;
+    
 }
 
 .menu li {
@@ -33,6 +34,7 @@
 
 .menu a {
     font-weight: 500;
+    font-size: 1.02rem;
     padding: 5px 0;
     position: relative;
 }

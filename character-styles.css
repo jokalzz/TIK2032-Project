@@ -1,0 +1,331 @@
+/* Character Page Styles */
+.character-page {
+    padding-top: 80px; /* Account for fixed header */
+    min-height: 100vh;
+    background: #f8f9fa;
+}
+
+/* Header Section */
+.character-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.character-header h1 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.character-subtitle {
+    font-size: 18px;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+/* Content Layout */
+.character-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.character-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.character-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.character-image img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.character-info {
+    flex: 2;
+    min-width: 300px;
+}
+
+/* Info Sections */
+.info-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.info-section:last-child {
+    border-bottom: none;
+}
+
+.info-section h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.info-section h2:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background: #2a7de1;
+    bottom: 0;
+    left: 0;
+}
+
+.info-section h3 {
+    font-size: 20px;
+    color: #343a40;
+    margin: 20px 0 10px;
+}
+
+.info-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #495057;
+    margin-bottom: 15px;
+}
+
+.info-section ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.info-section ul li {
+    margin-bottom: 8px;
+    color: #495057;
+}
+
+/* Character Details Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.info-label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.info-value {
+    color: #495057;
+    font-size: 16px;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #2a7de1;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-button:hover {
+    background: #1c5daa;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.nav-button i {
+    margin: 0 5px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 960px) {
+    .character-header h1 {
+        font-size: 30px;
+    }
+    
+    .character-subtitle {
+        font-size: 16px;
+    }
+    
+    .character-content {
+        gap: 30px;
+    }
+    
+    .info-section h2 {
+        font-size: 22px;
+    }
+    
+    .info-section h3 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .character-header {
+        margin-bottom: 30px;
+        padding: 15px 0;
+    }
+    
+    .character-header h1 {
+        font-size: 26px;
+    }
+    
+    .character-image {
+        margin-bottom: 20px;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .navigation-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .character-header h1 {
+        font-size: 24px;
+    }
+    
+    .character-subtitle {
+        font-size: 14px;
+    }
+    
+    .info-section h2 {
+        font-size: 20px;
+    }
+    
+    .info-section h3 {
+        font-size: 17px;
+    }
+    
+    .info-section p {
+        font-size: 15px;
+    }
+    
+    .info-item {
+        padding: 12px;
+    }
+}
+
+/* Special effects for game-related elements */
+.info-section strong {
+    color: #2a7de1;
+}
+
+.info-section h3 {
+    color: #343a40;
+    position: relative;
+    display: inline-block;
+    margin-top: 25px;
+}
+
+.info-section h3:before {
+    content: '⧫';
+    color: #2a7de1;
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+/* Character-specific color themes (can be expanded) */
+/* Miyabi - Subtle red accent */
+body:has(.character-header h1:contains("Miyabi")) .character-header h1 {
+    color: #e74c3c;
+}
+
+body:has(.character-header h1:contains("Miyabi")) .info-section h2:after {
+    background: #e74c3c;
+}
+
+body:has(.character-header h1:contains("Miyabi")) .nav-button {
+    background: #e74c3c;
+}
+
+body:has(.character-header h1:contains("Miyabi")) .nav-button:hover {
+    background: #c0392b;
+}
+
+/* Astra - Electric blue accent */
+body:has(.character-header h1:contains("Astra")) .character-header h1 {
+    color: #3498db;
+}
+
+body:has(.character-header h1:contains("Astra")) .info-section h2:after {
+    background: #3498db;
+}
+
+body:has(.character-header h1:contains("Astra")) .nav-button {
+    background: #3498db;
+}
+
+body:has(.character-header h1:contains("Astra")) .nav-button:hover {
+    background: #2980b9;
+}
+
+/* Alexandrina - Orange/fire accent */
+body:has(.character-header h1:contains("Alexandrina")) .character-header h1 {
+    color: #e67e22;
+}
+
+body:has(.character-header h1:contains("Alexandrina")) .info-section h2:after {
+    background: #e67e22;
+}
+
+body:has(.character-header h1:contains("Alexandrina")) .nav-button {
+    background: #e67e22;
+}
+
+body:has(.character-header h1:contains("Alexandrina")) .nav-button:hover {
+    background: #d35400;
+}
+
+/* Fallback selector approach for browsers that don't support :has */
+.miyabi-theme .character-header h1 { color: #e74c3c; }
+.miyabi-theme .info-section h2:after { background: #e74c3c; }
+.miyabi-theme .nav-button { background: #e74c3c; }
+.miyabi-theme .nav-button:hover { background: #c0392b; }
+
+.astra-theme .character-header h1 { color: #3498db; }
+.astra-theme .info-section h2:after { background: #3498db; }
+.astra-theme .nav-button { background: #3498db; }
+.astra-theme .nav-button:hover { background: #2980b9; }
+
+.rina-theme .character-header h1 { color: #e67e22; }
+.rina-theme .info-section h2:after { background: #e67e22; }
+.rina-theme .nav-button { background: #e67e22; }
+.rina-theme .nav-button:hover { background: #d35400; }

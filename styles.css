@@ -206,6 +206,7 @@ nav {
     margin-bottom: 10px;
 }
 
+
 .social-links {
     margin-top: 30px;
 }
@@ -816,8 +817,26 @@ html {
   }
   
   .banner .content .title:hover {
-    color: rgb(78, 60, 177);
+    color: rgb(177, 140, 60);
+    animation: glowPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow:
+      2px 2px 4px rgba(0, 0, 0, 0.7),
+      0 0 5px #efff92,
+      0 0 10px #efff92,
+      0 0 20px #aaff00;
   }
+  50% {
+    text-shadow:
+      2px 2px 4px rgba(0, 0, 0, 0.7),
+      0 0 2px #efff92,
+      0 0 5px #efff92,
+      0 0 10px #aaff00;
+  }
+}
   
   .welcome {
     font-family: 'Hallowed Grounds';
@@ -828,18 +847,22 @@ html {
   }
   
   .welcome:hover {
-    color: red;
+    color: rgb(255, 104, 104);
+  
   }
   
   .banner::before {
     content: '';
     position: absolute;
     inset: 0;
-    z-index: -2;
-    mask-image: url(images/ink_lv2.gif);
+    background-image: url('images/welcomepage.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  
+    mask-image: url('images/ink_lv2.gif');
     mask-size: cover;
     mask-position: center;
-    background-color: black;
   }
   
   .bg-video {
@@ -882,14 +905,10 @@ html {
   }
 
   .main-video {
-    width: 50%;             /* video akan mengikuti lebar container */
-    max-width: 1200px;       /* maksimal lebar video */
-    height: auto;            /* tinggi otomatis agar proporsional */
-    display: block;
-    margin: 0 auto;          /* biar tetap di tengah */
-    border-radius: 10px;     /* opsional: biar sudutnya membulat */
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.4); /* opsional: efek bayangan */
-  }
+    margin-top: 50px;
+    width: 50%;
+    height: auto;
+}
   
   .bawah {
     justify-content: center; 
