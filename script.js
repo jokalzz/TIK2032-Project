@@ -83,12 +83,6 @@ const activeNavHighlight = () => {
     });
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-    navSlide();
-    scrollReveal();
-    smoothScroll();
-    activeNavHighlight();
-});
 
 const toggle = () => {
     const burger = document.querySelector('.burger');
@@ -97,30 +91,6 @@ const toggle = () => {
     }
 };
 
-function updateDateTime() {
-    const now = new Date();
-    const dateOptions = { 
-        weekday: 'long', 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric',
-        timeZone: 'Asia/Makassar'
-    };
-    const timeOptions = { 
-        hour: '2-digit', 
-        minute: '2-digit', 
-        second: '2-digit',
-        hour12: false, 
-        timeZone: 'Asia/Makassar'
-    };
-
-    document.getElementById('date').textContent = now.toLocaleDateString('id-ID', dateOptions);
-    document.getElementById('time').textContent = now.toLocaleTimeString('id-ID', timeOptions);
-}
-
-// Perbarui setiap detik
-setInterval(updateDateTime, 1000);
-updateDateTime();
 
 function redirectToPage() {
         window.location.href = "https://www.instagram.com/jokaligis"; 
@@ -281,7 +251,3 @@ function updateDateTime() {
 // Update every second
 setInterval(updateDateTime, 1000);
 updateDateTime();
-
-function redirectToPage() {
-    window.location.href = "https://www.instagram.com/jokaligis"; 
-}
