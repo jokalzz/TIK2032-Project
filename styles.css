@@ -109,7 +109,7 @@ nav {
     justify-content: center;
     text-align: center;
     padding: 20px;
-    margin-top: 60px; /* Added to account for fixed header */
+    margin-top: 60px;
 }
 
 .hero-content {
@@ -972,5 +972,189 @@ button:active {
     button {
         font-size: 14px; /* Mengurangi ukuran font pada layar kecil */
         padding: 8px 16px; /* Mengurangi padding pada layar kecil */
+    }
+}
+
+/* Gallery Popup Styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.popup-image {
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+    border: 3px solid #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    cursor: default;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-caption {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+    max-width: 80%;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Make cursor indicate clickable images in gallery */
+.gallery-section h3:nth-of-type(1) ~ .gallery-grid .gallery-item,
+.gallery-section h3:nth-of-type(2) ~ .gallery-grid .gallery-item {
+    cursor: pointer;
+    overflow: hidden; /* Ensure effects stay within bounds */
+}
+
+/* Hover effect for gallery images */
+.gallery-section h3:nth-of-type(1) ~ .gallery-grid .gallery-item img,
+.gallery-section h3:nth-of-type(2) ~ .gallery-grid .gallery-item img {
+    transition: all 0.4s ease;
+}
+
+/* Color effect on hover */
+.gallery-section h3:nth-of-type(1) ~ .gallery-grid .gallery-item:hover img,
+.gallery-section h3:nth-of-type(2) ~ .gallery-grid .gallery-item:hover img {
+    filter: saturate(1.5) contrast(1.2) hue-rotate(15deg) grayscale(100%);
+
+    transform: scale(1.05);
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 767px) {
+    .popup-image {
+        max-width: 95%;
+        max-height: 70vh;
+    }
+    
+    .popup-caption {
+        font-size: 16px;
+        margin-top: 15px;
+        max-width: 90%;
+    }
+}
+
+/* Gallery Popup Styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.popup-media-container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-image {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border: 3px solid #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    cursor: default;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-video {
+    max-width: 100%;
+    max-height: 80vh;
+    border: 3px solid #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    cursor: default;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-caption {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+    max-width: 80%;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Special video indicator for Valorant Clips */
+.gallery-section h3:contains("Valorant Clips") ~ .gallery-grid .gallery-item::before {
+    content: "\f144"; /* Play circle icon */
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: rgba(255, 255, 255, 0.8);
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-section h3:contains("Valorant Clips") ~ .gallery-grid .gallery-item:hover::before {
+    opacity: 1;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 767px) {
+    .popup-image, .popup-video {
+        max-width: 95%;
+        max-height: 70vh;
+    }
+    
+    .popup-caption {
+        font-size: 16px;
+        margin-top: 15px;
+        max-width: 90%;
     }
 }
