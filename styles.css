@@ -329,6 +329,30 @@ nav {
     transition: transform 0.5s ease;
 }
 
+.more-photo {
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 8px 16px;
+    background: #2a7de1;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.more-photo:hover {
+    background: #1c5daa;
+    color: #fff;
+}
+
+.more-photo-wrapper {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
 .gallery-item:hover img {
     transform: scale(1.03); /* Reduced scale for mobile */
 }
